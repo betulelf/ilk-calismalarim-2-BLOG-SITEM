@@ -1,0 +1,461 @@
+/*Elif Betul Bayram Ana Sayfa Calismasidir.*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Shadows Into Light", serif;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    /*satir arasi bosluk birakmak icindir.*/
+    background-color: rgb(169, 113, 73);
+}
+
+html {
+    font-size: 6px;
+}
+
+
+
+a {
+    text-decoration: none;
+    /*alt cizgi kaldirmak icindir.*/
+}
+
+ul {
+    list-style-type: none;
+    /*madde basliklarini kaldirmak icindir.*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: bisque;
+    color: #333;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.col {
+    float: left;
+    width: 100%;
+    padding: 3px;
+}
+
+/*responsive tasarim 64.ders mobile ve tablet icin. breakpoint olusturmak.*/
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    html {
+        font-size: 7px;
+    }
+
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    html {
+        font-size: 9px;
+    }
+
+    .col {
+        width: 30%;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+#logo-box .logo {
+    color: #333;
+    font-size: 16px;
+}
+
+/*logoyu sola menuyu sağa almak icindir.*/
+#nav-links {
+    float: right;
+    font-weight: 300px;
+}
+
+#logo-box {
+    float: left;
+    padding-top: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*menuyu kendi icerisinde yatay hizalamak ve aralarında bosluk birakmak icindir*/
+#nav-links .nav-item {
+    float: left;
+    margin: 5px;
+}
+
+#nav-links .nav-link {
+    color: black;
+    font-size: 16px;
+    display: block;
+    padding: 5px;
+    letter-spacing: 1px;
+    transition: color 0.4s;
+}
+
+#nav-links .nav-link:hover {
+    color: chocolate;
+}
+
+/*navbar bolumunu responsive olarak ayarlamak. 66.ders*/
+
+#nav-links .nav-icon {
+    display: none;
+    /* normal boyutta iken gorunurluk ozelligini kaldirdi.*/
+}
+
+@media (max-width: 992px) {
+    #logo-box {
+        float: none;
+    }
+
+    #logo-box .logo {
+        font-size: 20px;
+    }
+
+    #nav-links {
+        float: none;
+    }
+
+    #nav-links .nav-link {
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        text-align: left;
+    }
+
+    #nav-links .nav-icon {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 5px;
+        font-size: 20px;
+
+    }
+
+    /*67.ders navbar butonunu dropdown yapmak icin javascrit kullandi*/
+    /*listenin icerisinde birinci eleman haricindekileri ifade ediyormus.*/
+    #nav-links.responsive li:not(:first-child) {
+        display: none;
+        /*menu iconu haricindekilerin hepsi gorunmez olacaktir.*/
+    }
+
+
+
+}
+
+header {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 200px;
+    height: auto;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 35px;
+}
+
+.star-light {
+    border: none;
+    border-top: 4px solid #fff;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 25px auto;
+    overflow: visible;
+    height: 0;
+}
+
+.star-light::after {
+    content: "\2605";
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+    top: -15px;
+    position: relative;
+    padding: 0 8px;
+    background-color: rgb(169, 113, 73);
+}
+
+header h2 {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 300px;
+}
+
+#portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+}
+
+.star-light {
+    border: none;
+    border-top: 4px solid #fff;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 25px auto;
+    overflow: visible;
+    height: 0;
+}
+
+.star-light::after {
+    content: "\2605";
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+    top: -15px;
+    position: relative;
+    padding: 0 8px;
+    background-color: rgb(169, 113, 73);
+}
+
+.portfolio-item {
+    /*yukseklik ve arka plan rengi kaldirildi.*/
+    position: relative;
+    /*overlay ve gorsel ust uste geldigi icin yapildi.*/
+    max-width: 100%;
+}
+
+.img-fluid-p {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-item img {
+    display: block;
+    /* overlay gorselle birlikte ust uste geldigi icin yapildi.*/
+    border-radius: 13px;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    /*dolgulu kisim ayni hizada olacagi icindir.*/
+    left: 0;
+    height: 100%;
+    /*bulundugu divi kapsayacaktir.*/
+    width: 100%;
+    background-color: #1abc9b;
+    opacity: 0;
+    /*overlay in gorunurlugu*/
+    transition: opacity 0.4s;
+}
+
+.img-overlay .icon {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*overlay uzerine gelindiginde yesil olmasi icin hover ozelligi kullaniliyor.*/
+.portfolio-item:hover .img-overlay {
+    opacity: 0.7;
+    border-radius: 13px;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+}
+
+#about-text {
+    text-align: left;
+}
+
+/*65.ders responsive tasarim olusturmak.*/
+/*bir sorun cikti cozemedim tekrar bakacagim. 65.dersin about kismina*/
+#about-text .left {
+    float: left;
+    width: 50%;
+}
+
+#about-text .right {
+    float: right;
+    width: 50%;
+}
+
+#about-text .text {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.btn-large {
+    font-size: 20px;
+    padding: 22px 16px;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px double #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5sn;
+}
+
+.btn:hover {
+    color: darkgoldenrod;
+    background-color: #fff;
+}
+
+#contact-form {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    color: #fff;
+}
+
+.form-group {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.form-group input {
+    border: none;
+    background-color: rgb(169, 113, 73);
+    width: 100%;
+    display: block;
+    /*tum alana yayilacagi icindir.*/
+    font-size: 24px;
+}
+
+.form-group textarea {
+    border: none;
+    background-color: rgb(169, 113, 73);
+    width: 100%;
+    display: block;
+    /*tum alana yayilacagi icindir.*/
+    font-size: 24px;
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+.form-group textarea:focus {
+    outline: 0;
+}
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: bisque;
+    color: black;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.btn-social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.copyright {
+    background-color: lightgoldenrodyellow;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: chocolate;
+    text-align: center;
+}
